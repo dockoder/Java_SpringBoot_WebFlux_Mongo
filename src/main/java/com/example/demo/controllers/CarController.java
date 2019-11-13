@@ -43,7 +43,7 @@ public class CarController {
     // in the database.
     // This is a live connection :)
     @PostMapping(value="/save", consumes = "application/stream+json")
-    public void getAll(@RequestBody Flux<Car> cars){
+    public void pushingCars(@RequestBody Flux<Car> cars){
         repo.saveAll(cars);
     }
 }
